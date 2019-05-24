@@ -7,7 +7,7 @@ test_equal_pairs = (
 )
 
 test_not_equal_pairs = (
-    (1, 2),
+    (1, 2), (3, 15)
 )
 
 @pytest.mark.parametrize("a,b", test_equal_pairs)
