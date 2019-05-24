@@ -1,12 +1,19 @@
 import objectbuzz
+import pytest
 
 
-def test_fizz_1():
-    assert objectbuzz.FizzBuzzer(1) == objectbuzz.FizzBuzzer(1)
+test_equal_pairs = (
+    (1, 1), (3, 6)
+)
 
+test_not_equal_pairs = (
+    (1, 2),
+)
 
-def test_fizz_1_2():
-    assert objectbuzz.FizzBuzzer(1) != objectbuzz.FizzBuzzer(2)
+@pytest.mark.parametrize("a,b", test_equal_pairs)
+def test_fizzbuzzer_equal(a: int, b: int):
+    assert objectbuzz.FizzBuzzer(a) == objectbuzz.FizzBuzzer(b)
 
-def test_fizz_3_6():
-    assert objectbuzz.FizzBuzzer(3) == objectbuzz.FizzBuzzer(6)
+@pytest.mark.parametrize("a,b", test_not_equal_pairs)
+def test_fizzbuzzer_not_equal(a: int, b: int):
+    assert objectbuzz.FizzBuzzer(a) != objectbuzz.FizzBuzzer(b)
