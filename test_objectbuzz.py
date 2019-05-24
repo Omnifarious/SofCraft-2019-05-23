@@ -3,7 +3,7 @@ import pytest
 
 
 test_equal_pairs = (
-    (1, 1), (3, 6)
+    (1, 1), (3, 6), (5, 10)
 )
 
 test_not_equal_pairs = (
