@@ -9,6 +9,6 @@ class FizzBuzzer(object):
     def __eq__(self, other: FizzBuzzer) -> bool:
         return ((self.n_ % 15 == 0) and (other.n_ % 15 == 0)) or \
                ((not ((self.n_ % 15 == 0) or (other.n_ % 15 == 0))) and
-                ((self.n_ % 3 == 0) and (other.n_ % 3 == 0)) or
-                ((self.n_ % 5 == 0) and (other.n_ % 5 == 0)) or
-                self.n_ == other.n_)
+                (((self.n_ % 3 == 0) and (other.n_ % 3 == 0)) or
+                 ((self.n_ % 5 == 0) and (other.n_ % 5 == 0)) or
+                 self.n_ == other.n_))
